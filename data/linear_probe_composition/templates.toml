@@ -1,0 +1,214 @@
+
+[concepts.sexes]
+train = [
+    # Human
+    ["man", "male"],
+    ["woman", "female"],
+    ["boy", "male"],
+    ["girl", "female"],
+    ["brother", "male"],
+    ["sister", "female"],
+
+    # Animal
+    ["rooster", "male"],
+    ["hen", "female"],
+    ["cockerel", "male"],
+    ["pullet", "female"],
+    ["bull", "male"],
+    ["cow", "female"],
+    ["lion", "male"],
+    ["lioness", "female"],
+    ["tiger", "male"],
+    ["tigress", "female"],
+]
+
+test = [
+    ["stallion", "male"],
+    ["mare", "female"],
+    ["colt", "male"],
+    ["filly", "female"],
+]
+
+[concepts.age]
+train = [
+    # Human
+    ("boy", "young"),
+    ("man", "adult"),
+    ("girl", "young"),
+    ("woman", "adult"),
+    
+    # Animal
+    ("cockerel", "young"),
+    ("rooster", "adult"),
+    ("pullet", "young"),
+    ("hen", "adult"),
+    ("calf", "young"),
+    ("cow", "adult"),
+    ("puppy", "young"),
+    ("dog", "adult"),
+    ("kitten", "young"),
+    ("cat", "adult"),
+    ("lamb", "young"),
+    ("sheep", "adult"),
+    ("fawn", "young"),
+    ("deer", "adult"),
+    ("cub", "young"),
+    ("bear", "adult"),
+]
+
+test = [
+    ("colt", "young"),
+    ("stallion", "adult"),
+    ("filly", "young"),
+    ("mare", "adult"),
+]
+
+
+[carriers]
+train = '''
+Nearby, {NP} came into view.
+The view included {NP}.
+There was a sighting of {NP}.
+In plain view was {NP}.
+A brief report mentioned {NP}.
+According to the report, {NP} was present.
+The report contained a brief description of {NP}.
+During the conversation, there was a mention of {NP}.
+The discussion turned briefly to {NP}.
+In passing, {NP} came up in conversation.
+The memory included a glimpse of {NP}.
+What remained in memory was an image of {NP}.
+In the remembered scene, {NP} was visible.
+A moment involving {NP} stayed in memory.
+A brief description referred to {NP}.
+At the center of the description was {NP}.
+The description began by mentioning {NP}.
+In a brief description, {NP} was noted.
+There was a brief encounter with {NP}.
+During the day, {NP} was encountered.
+An encounter involving {NP} occurred nearby.
+What the encounter brought into view was {NP}.
+A news item mentioned {NP}.
+In the news account, {NP} received a brief mention.
+Part of the news item concerned {NP}.
+The news item included a passing reference to {NP}.
+The field notes recorded an observation of {NP}.
+Among the field notes was a description of {NP}.
+In one field note, {NP} was mentioned.
+The instruction was to pay attention to {NP}.
+Under the instruction, {NP} was to be noted.
+Attention was directed toward {NP} by the instruction.
+A reference to {NP} appeared in the instruction.
+The story introduced {NP} briefly.
+At this point in the narrative, {NP} appeared.
+A passing moment in the story involved {NP}.
+The introduction drew attention to {NP}.
+Introduced at the start was {NP}.
+In the introduction, {NP} received a mention.
+An introductory passage included a brief description of {NP}.
+A previous statement made reference to {NP}.
+The subject of the reference was {NP}.
+There was a reference to {NP} in the statement.
+A passing glance revealed {NP}.
+A closer look revealed {NP}.
+An inspection of the scene uncovered {NP}.
+In the distance, there was a view of {NP}.
+The audio recording contained a reference to {NP}.
+The interview included a question about {NP}.
+The briefing included an update about {NP}.
+A radio message referred to {NP}.
+The broadcast featured a segment about {NP}.
+A podcast episode touched on {NP}.
+The lecture included an example involving {NP}.
+During the lesson, attention shifted to {NP}.
+The announcement made reference to {NP}.
+A voicemail message mentioned {NP}.
+The email drew attention to {NP}.
+The text message mentioned {NP}.
+The article included a paragraph about {NP}.
+A headline referred to {NP}.
+A footnote drew attention to {NP}.
+The transcript mentioned {NP}.
+The meeting minutes contained a reference to {NP}.
+In a later recollection, there was a mention of {NP}.
+The later recollection centered on {NP}.
+Recalled afterward was a scene involving {NP}.
+A recollection shared later included a description of {NP}.
+The summary included a brief mention of {NP}.
+In summary, {NP} was noted.
+One detail in the summary concerned {NP}.
+A reference to {NP} appeared near the start of the summary.
+Along the route, {NP} was noticed.
+The walk led past {NP}.
+During the visit, attention turned to {NP}.
+At the edge of the scene, {NP} became noticeable.
+During the tour, {NP} was pointed out.
+An entry in the log documented {NP}.
+The checklist included a reference to {NP}.
+The inventory contained a listing for {NP}.
+The catalog included a description of {NP}.
+At the end of the presentation, {NP} was mentioned.
+Much later, a recollection of {NP} resurfaced.
+Among the later recollections, one concerned {NP}.
+The recap opened with {NP}.
+Highlighted in the overview was {NP}.
+The main point of the summary was {NP}.
+Partway through the outing, {NP} was spotted.
+Later in the trip, attention fell on {NP}.
+On the tour, {NP} drew interest.
+One catalog entry was devoted to {NP}.
+Midway through the presentation, the focus was on {NP}.
+The presentation closed with a remark about {NP}.
+The agenda had an item about {NP}.
+The questionnaire asked about {NP}.
+A postscript referred to {NP}.'''
+
+test = '''
+A glimpse of {NP} appeared momentarily.
+Looking around revealed {NP}.
+The scene offered a view of {NP}.
+What caught the eye was {NP}.
+The surroundings revealed {NP}.
+Unexpectedly, {NP} turned up.
+The presence of {NP} was apparent.
+Note was taken of {NP}.
+The surroundings featured {NP}.
+There was no missing {NP}.
+A scene unfolded with {NP} in view.
+The surrounding area offered a glimpse of {NP}.
+The scene was notable for the presence of {NP}.
+The surroundings brought {NP} into focus.
+There was an opportunity to observe {NP}.
+Briefly, {NP} was in sight.
+For a moment, {NP} was there to be seen.
+Within sight was {NP}.
+There, unmistakably, was {NP}.
+The sight that presented itself was {NP}.
+Out of nowhere, {NP} appeared.
+For a while, {NP} remained visible.
+Part of the scenery was {NP}.
+It was easy to make out {NP}.
+In the midst of the scene was {NP}.
+Off to one side, {NP} could be seen.
+At a glance, {NP} was evident.
+The sight of {NP} was unexpected.
+Somewhere ahead, {NP} was visible.
+As the scene opened up, {NP} emerged.
+Into the scene came {NP}.
+Eventually, {NP} became discernible.'''
+
+
+[suffix]
+template = "\nRespond with {L1} if the described entity is {G1}, and respond with {L2} if the described entity is {G2}.\nAnswer:"
+
+vars = [
+    ["A", "B"],
+    ["0", "1"],
+]
+
+
+[settings]
+determiners = [
+    "the ",
+    "a ",
+]
