@@ -29,38 +29,39 @@ test = [
     ["filly", "female"],
 ]
 
+
 [concepts.age]
 train = [
     # Human
-    ("boy", "young"),
-    ("man", "adult"),
-    ("girl", "young"),
-    ("woman", "adult"),
+    ["boy", "young"],
+    ["man", "adult"],
+    ["girl", "young"],
+    ["woman", "adult"],
     
     # Animal
-    ("cockerel", "young"),
-    ("rooster", "adult"),
-    ("pullet", "young"),
-    ("hen", "adult"),
-    ("calf", "young"),
-    ("cow", "adult"),
-    ("puppy", "young"),
-    ("dog", "adult"),
-    ("kitten", "young"),
-    ("cat", "adult"),
-    ("lamb", "young"),
-    ("sheep", "adult"),
-    ("fawn", "young"),
-    ("deer", "adult"),
-    ("cub", "young"),
-    ("bear", "adult"),
+    ["cockerel", "young"],
+    ["rooster", "adult"],
+    ["pullet", "young"],
+    ["hen", "adult"],
+    ["calf", "young"],
+    ["cow", "adult"],
+    ["puppy", "young"],
+    ["dog", "adult"],
+    ["kitten", "young"],
+    ["cat", "adult"],
+    ["lamb", "young"],
+    ["sheep", "adult"],
+    ["fawn", "young"],
+    ["deer", "adult"],
+    ["cub", "young"],
+    ["bear", "adult"],
 ]
 
 test = [
-    ("colt", "young"),
-    ("stallion", "adult"),
-    ("filly", "young"),
-    ("mare", "adult"),
+    ["colt", "young"],
+    ["stallion", "adult"],
+    ["filly", "young"],
+    ["mare", "adult"],
 ]
 
 
