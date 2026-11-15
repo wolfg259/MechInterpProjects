@@ -61,6 +61,41 @@ test = [
 ]
 
 
+[concepts.horse]
+train = [
+    # Horse
+    ["horse", "horse"],
+    ["pony", "horse"],
+    ["steed", "horse"],
+    ["racehorse", "horse"],
+    ["workhorse", "horse"],
+    ["gelding", "horse"],
+    ["Clydesdale", "horse"],
+    ["Shetland pony", "horse"],
+
+    # Not horse
+    ["donkey", "not_horse"],
+    ["zebra", "not_horse"],
+    ["camel", "not_horse"],
+    ["deer", "not_horse"],
+    ["sheep", "not_horse"],
+    ["goat", "not_horse"],
+    ["pig", "not_horse"],
+    ["dog", "not_horse"],
+]
+
+test = [
+    ["stallion", "horse"],
+    ["mare", "horse"],
+    ["colt", "horse"],
+    ["filly", "horse"],
+    ["boar", "not_horse"],
+    ["sow", "not_horse"],
+    ["piglet", "not_horse"],
+    ["fawn", "not_horse"],
+]
+
+
 [carriers]
 train = '''
 Nearby, {NP} came into view.
