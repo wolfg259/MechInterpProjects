@@ -231,7 +231,7 @@ Eventually, {NP} became discernible.'''
 
 
 [suffix]
-template = "\nRespond with {L1} if the described entity is {G1}, and respond with {L2} if the described entity is {G2}.\nAnswer (no punctuation):"
+template = "\nRespond with {L1} if the described entity is {G1}, and respond with {L2} if the described entity is {G2}.\nAnswer:"
 
 vars = [
     ["A", "B"],
