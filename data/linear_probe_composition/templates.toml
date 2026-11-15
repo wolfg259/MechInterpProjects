@@ -37,24 +37,20 @@ train = [
     ["man", "adult"],
     ["girl", "young"],
     ["woman", "adult"],
-    
+    ["child", "young"],
+    ["grown-up", "adult"],
+
     # Animal
-    ["cockerel", "young"],
     ["rooster", "adult"],
-    ["pullet", "young"],
     ["hen", "adult"],
+    ["cockerel", "young"],
+    ["pullet", "young"],
+    ["bull", "adult"],
+    ["heifer", "young"],
+    ["steer", "adult"],
     ["calf", "young"],
-    ["cow", "adult"],
-    ["puppy", "young"],
-    ["dog", "adult"],
-    ["kitten", "young"],
-    ["cat", "adult"],
+    ["ewe", "adult"],
     ["lamb", "young"],
-    ["sheep", "adult"],
-    ["fawn", "young"],
-    ["deer", "adult"],
-    ["cub", "young"],
-    ["bear", "adult"],
 ]
 
 test = [
