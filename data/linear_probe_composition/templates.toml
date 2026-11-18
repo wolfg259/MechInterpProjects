@@ -1,69 +1,292 @@
+determiners = ["the", "a", "this", "that"]
 
-[concepts.sexes]
-train = [
-    # Human
+# Neutral carriers
+neutral_carriers_train = [
+    "Nearby, {DET} {CON}",
+    "The view included {DET} {CON}",
+    "There was a sighting of {DET} {CON}",
+    "In plain view was {DET} {CON}",
+    "A brief report mentioned {DET} {CON}",
+    "According to the report, {DET} {CON}",
+    "The report contained a brief description of {DET} {CON}",
+    "During the conversation, there was a mention of {DET} {CON}",
+    "The discussion turned briefly to {DET} {CON}",
+    "In passing, the speaker mentioned {DET} {CON}",
+    "The memory included a glimpse of {DET} {CON}",
+    "What remained in memory was an image of {DET} {CON}",
+    "In the remembered scene, the observer spotted {DET} {CON}",
+    "A moment stayed in memory involving {DET} {CON}",
+    "A brief description referred to {DET} {CON}",
+    "At the center of the description was {DET} {CON}",
+    "The description began by mentioning {DET} {CON}",
+    "In a brief description, the author noted {DET} {CON}",
+    "There was a brief encounter with {DET} {CON}",
+    "During the day, the tracker encountered {DET} {CON}",
+    "What the encounter brought into view was {DET} {CON}",
+    "A news item mentioned {DET} {CON}",
+    "In the news account, the reporter described {DET} {CON}",
+    "Part of the news item concerned {DET} {CON}",
+    "The news item included a passing reference to {DET} {CON}",
+    "The field notes recorded an observation of {DET} {CON}",
+    "Among the field notes was a description of {DET} {CON}",
+    "In one field note, the researcher recorded {DET} {CON}",
+    "The instruction was to pay attention to {DET} {CON}",
+    "Attention was directed toward {DET} {CON}",
+    "A reference appeared in the instruction to {DET} {CON}",
+    "The story briefly introduced {DET} {CON}",
+    "At this point in the narrative, the reader met {DET} {CON}",
+    "A passing moment in the story involved {DET} {CON}",
+    "The introduction drew attention to {DET} {CON}",
+    "Introduced at the start was {DET} {CON}",
+    "In the introduction, the narrator mentioned {DET} {CON}",
+    "An introductory passage included a brief description of {DET} {CON}",
+    "A previous statement made reference to {DET} {CON}",
+    "The subject of the reference was {DET} {CON}",
+    "There was a reference in the statement to {DET} {CON}",
+    "A passing glance revealed {DET} {CON}",
+    "A closer look revealed {DET} {CON}",
+    "An inspection of the scene uncovered {DET} {CON}",
+    "In the distance, there was a view of {DET} {CON}",
+    "The audio recording contained a reference to {DET} {CON}",
+    "The interview included a question about {DET} {CON}",
+    "The briefing included an update about {DET} {CON}",
+    "A radio message referred to {DET} {CON}",
+    "The broadcast featured a segment about {DET} {CON}",
+    "A podcast episode touched on {DET} {CON}",
+    "The lecture included an example involving {DET} {CON}",
+    "During the lesson, attention shifted to {DET} {CON}",
+    "The announcement made reference to {DET} {CON}",
+    "A voicemail message mentioned {DET} {CON}",
+    "The email drew attention to {DET} {CON}",
+    "The text message mentioned {DET} {CON}",
+    "The article included a paragraph about {DET} {CON}",
+    "A headline referred to {DET} {CON}",
+    "A footnote drew attention to {DET} {CON}",
+    "The transcript mentioned {DET} {CON}",
+    "The meeting minutes contained a reference to {DET} {CON}",
+    "In a later recollection, there was a mention of {DET} {CON}",
+    "The later recollection centered on {DET} {CON}",
+    "A recollection shared later included a description of {DET} {CON}",
+    "The summary included a brief mention of {DET} {CON}",
+    "One detail in the summary concerned {DET} {CON}",
+    "Along the route, the guide noticed {DET} {CON}",
+    "The walk led past {DET} {CON}",
+    "During the visit, attention turned to {DET} {CON}",
+    "During the tour, the guide pointed out {DET} {CON}",
+]
+
+neutral_carriers_test = [
+    "A glimpse appeared momentarily of {DET} {CON}",
+    "Looking around revealed {DET} {CON}",
+    "The scene offered a view of {DET} {CON}",
+    "What caught the eye was {DET} {CON}",
+    "The surroundings revealed {DET} {CON}",
+    "Unexpectedly, the trail revealed {DET} {CON}",
+    "Note was taken of {DET} {CON}",
+    "The surroundings featured {DET} {CON}",
+    "There was no missing {DET} {CON}",
+    "The surrounding area offered a glimpse of {DET} {CON}",
+    "The scene was notable for the presence of {DET} {CON}",
+    "The surroundings brought into focus {DET} {CON}",
+    "There was an opportunity to observe {DET} {CON}",
+    "Within sight was {DET} {CON}",
+    "There, unmistakably, was {DET} {CON}",
+    "The sight that presented itself was {DET} {CON}",
+    "Part of the scenery was {DET} {CON}",
+    "It was easy to make out {DET} {CON}",
+    "In the midst of the scene was {DET} {CON}",
+    "At a glance, the observer spotted {DET} {CON}",
+    "Somewhere ahead, the camera captured {DET} {CON}",
+    "Out of the brush emerged {DET} {CON}",
+    "Through the binoculars, the ranger saw {DET} {CON}",
+    "Across the clearing stood {DET} {CON}",
+]
+
+# Neutral (undefined sex & age) anchor nouns
+anchors_train = [
+    "animal",
+    "creature",
+    "rabbit",
+    "fox",
+    "bear",
+    "wolf",
+    "otter",
+    "badger",
+    "squirrel",
+    "deer",
+    "elk",
+    "moose",
+    "boar",
+    "pig",
+    "sheep",
+    "goat",
+    "dog",
+    "cat",
+    "lion",
+    "tiger",
+    "eagle",
+    "owl",
+    "hawk",
+    "duck",
+]
+
+anchors_test = [
+    "horse",
+    "pony",
+    "steed",
+    "mustang",
+    "bronco",
+    "equine",
+]
+
+[datasets.sexes]
+concepts_train = [
     ["man", "male"],
     ["woman", "female"],
     ["boy", "male"],
     ["girl", "female"],
+    ["father", "male"],
+    ["mother", "female"],
     ["brother", "male"],
     ["sister", "female"],
-
-    # Animal
+    ["uncle", "male"],
+    ["aunt", "female"],
+    ["king", "male"],
+    ["queen", "female"],
+    ["actor", "male"],
+    ["actress", "female"],
     ["rooster", "male"],
     ["hen", "female"],
     ["cockerel", "male"],
     ["pullet", "female"],
+    ["drake", "male"],
+    ["duck", "female"],
     ["bull", "male"],
     ["cow", "female"],
+    ["ram", "male"],
+    ["ewe", "female"],
+    ["buck", "male"],
+    ["doe", "female"],
+    ["boar", "male"],
+    ["sow", "female"],
     ["lion", "male"],
     ["lioness", "female"],
     ["tiger", "male"],
     ["tigress", "female"],
 ]
-
-test = [
+concepts_test = [
     ["stallion", "male"],
     ["mare", "female"],
     ["colt", "male"],
     ["filly", "female"],
 ]
+contextual_train = [
+    ["After nursing its newborn litter all morning, {DET} tired {CON}", "female"],
+    ["Having just given birth to healthy offspring, {DET} exhausted {CON}", "female"],
+    ["While lactating and feeding its hungry young, {DET} protective {CON}", "female"],
+    ["Having just laid a clutch of eggs in the nest, {DET} {CON}", "female"],
+    ["While brooding warmly over its freshly laid eggs, {DET} {CON}", "female"],
+    ["Confirming the pregnancy via ultrasound, the vet monitored {DET} {CON}", "female"],
+    ["During the routine spay surgery, the veterinarian examined {DET} {CON}", "female"],
+    ["Checking the uterus and ovaries during the scan, the vet treated {DET} {CON}", "female"],
+    ["Carrying developing embryos late in gestation, {DET} pregnant {CON}", "female"],
+    ["Producing nutrient-rich milk for its nursing young, {DET} maternal {CON}", "female"],
+    ["Preparing a birthing den weeks before delivery, {DET} expectant {CON}", "female"],
+    ["After siring several litters across the territory, {DET} dominant {CON}", "male"],
+    ["During the routine neuter surgery, the veterinarian examined {DET} {CON}", "male"],
+    ["Checking the testes during the annual health exam, the vet inspected {DET} {CON}", "male"],
+    ["Competing aggressively with rivals to fertilize mates, {DET} territorial {CON}", "male"],
+    ["Having fathered all the offspring in the group, {DET} breeding {CON}", "male"],
+    ["Evaluating paternal lineage and sperm motility, the breeder checked {DET} {CON}", "male"],
+    ["Patrolling the perimeter while its mate nursed their young, {DET} fathering {CON}", "male"],
+    ["Displaying bright breeding plumage to attract a female mate, {DET} {CON}", "male"],
+    ["Guarding the pregnant mother and their shared den, {DET} paternal {CON}", "male"],
+]
+contextual_test = [
+    ["After nursing its newborn foal all morning, {DET} tired {CON}", "female"],
+    ["Confirming the pregnancy via ultrasound, the equine vet monitored {DET} {CON}", "female"],
+    ["During the routine spay procedure, the surgeon examined {DET} {CON}", "female"],
+    ["Carrying a foal late in its eleven-month gestation, {DET} pregnant {CON}", "female"],
+    ["After siring several foals on the ranch, {DET} prized {CON}", "male"],
+    ["During the routine gelding procedure, the equine vet examined {DET} {CON}", "male"],
+    ["Checking the testes during a breeding soundness exam, the vet inspected {DET} {CON}", "male"],
+    ["Competing with rival males for dominance over the herd, {DET} {CON}", "male"],
+]
 
-
-[concepts.age]
-train = [
-    # Human
+[datasets.age]
+concepts_train = [
     ["boy", "young"],
     ["man", "adult"],
     ["girl", "young"],
     ["woman", "adult"],
     ["child", "young"],
     ["grown-up", "adult"],
-
-    # Animal
-    ["rooster", "adult"],
-    ["hen", "adult"],
+    ["infant", "young"],
+    ["elder", "adult"],
+    ["toddler", "young"],
+    ["parent", "adult"],
     ["cockerel", "young"],
+    ["rooster", "adult"],
     ["pullet", "young"],
+    ["hen", "adult"],
+    ["chick", "young"],
+    ["chicken", "adult"],
+    ["duckling", "young"],
+    ["duck", "adult"],
+    ["calf", "young"],
     ["bull", "adult"],
     ["heifer", "young"],
-    ["steer", "adult"],
-    ["calf", "young"],
-    ["ewe", "adult"],
+    ["cow", "adult"],
     ["lamb", "young"],
+    ["ewe", "adult"],
+    ["kid", "young"],
+    ["goat", "adult"],
+    ["piglet", "young"],
+    ["sow", "adult"],
+    ["fawn", "young"],
+    ["deer", "adult"],
+    ["puppy", "young"],
+    ["dog", "adult"],
+    ["kitten", "young"],
+    ["cat", "adult"],
 ]
-
-test = [
+concepts_test = [
     ["colt", "young"],
     ["stallion", "adult"],
     ["filly", "young"],
     ["mare", "adult"],
 ]
+contextual_train = [
+    ["Still dependent on its mother's milk for survival, {DET} tiny {CON}", "young"],
+    ["Having just hatched from its shell only hours ago, {DET} wet {CON}", "young"],
+    ["Taking its first wobbly steps beside its mother, {DET} newborn {CON}", "young"],
+    ["Not yet weaned and still growing its baby teeth, {DET} small {CON}", "young"],
+    ["Too immature to reproduce for another two seasons, {DET} juvenile {CON}", "young"],
+    ["Huddled in the nest waiting for its parents to bring food, {DET} {CON}", "young"],
+    ["Still covered in soft natal down rather than mature coats, {DET} {CON}", "young"],
+    ["Observing rapid skeletal growth plates on the X-ray, the vet treated {DET} {CON}", "young"],
+    ["After many years of leading the group across the territory, {DET} aged {CON}", "adult"],
+    ["Fully grown and raising its own third generation of offspring, {DET} mature {CON}", "adult"],
+    ["With fully fused growth plates and worn molar teeth, {DET} older {CON}", "adult"],
+    ["Having reached full physical maturity years ago, {DET} seasoned {CON}", "adult"],
+    ["Experienced after surviving many harsh winters in the wild, {DET} elderly {CON}", "adult"],
+    ["Responsible for feeding and protecting its dependent young, {DET} parent {CON}", "adult"],
+    ["Showing graying fur around the muzzle from old age, {DET} senior {CON}", "adult"],
+    ["At peak reproductive maturity during the breeding season, {DET} full-grown {CON}", "adult"],
+]
+contextual_test = [
+    ["Still nursing beside its mother in the pasture, {DET} newborn {CON}", "young"],
+    ["Taking its first wobbly steps just hours after birth, {DET} tiny {CON}", "young"],
+    ["Not yet weaned and growing its deciduous baby teeth, {DET} juvenile {CON}", "young"],
+    ["With open skeletal growth plates on the leg X-ray, {DET} young {CON}", "young"],
+    ["After many years of competing and breeding on the ranch, {DET} aged {CON}", "adult"],
+    ["Fully grown with completely fused skeletal growth plates, {DET} mature {CON}", "adult"],
+    ["Showing worn dental tables typical of a fifteen-year-old, {DET} older {CON}", "adult"],
+    ["Raising its own offspring after reaching full maturity, {DET} seasoned {CON}", "adult"],
+]
 
-
-[concepts.horse]
-train = [
-    # Horse
+[datasets.horse]
+concepts_train = [
     ["horse", "horse"],
     ["pony", "horse"],
     ["steed", "horse"],
@@ -72,8 +295,13 @@ train = [
     ["gelding", "horse"],
     ["Clydesdale", "horse"],
     ["Shetland pony", "horse"],
-
-    # Not horse
+    ["mustang", "horse"],
+    ["bronco", "horse"],
+    ["thoroughbred", "horse"],
+    ["draft horse", "horse"],
+    ["warhorse", "horse"],
+    ["packhorse", "horse"],
+    ["equine", "horse"],
     ["donkey", "not_horse"],
     ["zebra", "not_horse"],
     ["camel", "not_horse"],
@@ -82,165 +310,27 @@ train = [
     ["goat", "not_horse"],
     ["pig", "not_horse"],
     ["dog", "not_horse"],
+    ["cow", "not_horse"],
+    ["bull", "not_horse"],
+    ["rooster", "not_horse"],
+    ["hen", "not_horse"],
+    ["lion", "not_horse"],
+    ["tiger", "not_horse"],
+    ["wolf", "not_horse"],
 ]
-
-test = [
+concepts_test = [
     ["stallion", "horse"],
     ["mare", "horse"],
     ["colt", "horse"],
     ["filly", "horse"],
+    ["gelding", "horse"],
     ["boar", "not_horse"],
-    ["sow", "not_horse"],
-    ["piglet", "not_horse"],
+    ["sheep", "not_horse"],
+    ["donkey", "not_horse"],
     ["fawn", "not_horse"],
+    ["bull", "not_horse"],
 ]
-
-
-[carriers]
-train = '''
-Nearby, {NP} came into view.
-The view included {NP}.
-There was a sighting of {NP}.
-In plain view was {NP}.
-A brief report mentioned {NP}.
-According to the report, {NP} was present.
-The report contained a brief description of {NP}.
-During the conversation, there was a mention of {NP}.
-The discussion turned briefly to {NP}.
-In passing, {NP} came up in conversation.
-The memory included a glimpse of {NP}.
-What remained in memory was an image of {NP}.
-In the remembered scene, {NP} was visible.
-A moment involving {NP} stayed in memory.
-A brief description referred to {NP}.
-At the center of the description was {NP}.
-The description began by mentioning {NP}.
-In a brief description, {NP} was noted.
-There was a brief encounter with {NP}.
-During the day, {NP} was encountered.
-An encounter involving {NP} occurred nearby.
-What the encounter brought into view was {NP}.
-A news item mentioned {NP}.
-In the news account, {NP} received a brief mention.
-Part of the news item concerned {NP}.
-The news item included a passing reference to {NP}.
-The field notes recorded an observation of {NP}.
-Among the field notes was a description of {NP}.
-In one field note, {NP} was mentioned.
-The instruction was to pay attention to {NP}.
-Under the instruction, {NP} was to be noted.
-Attention was directed toward {NP} by the instruction.
-A reference to {NP} appeared in the instruction.
-The story introduced {NP} briefly.
-At this point in the narrative, {NP} appeared.
-A passing moment in the story involved {NP}.
-The introduction drew attention to {NP}.
-Introduced at the start was {NP}.
-In the introduction, {NP} received a mention.
-An introductory passage included a brief description of {NP}.
-A previous statement made reference to {NP}.
-The subject of the reference was {NP}.
-There was a reference to {NP} in the statement.
-A passing glance revealed {NP}.
-A closer look revealed {NP}.
-An inspection of the scene uncovered {NP}.
-In the distance, there was a view of {NP}.
-The audio recording contained a reference to {NP}.
-The interview included a question about {NP}.
-The briefing included an update about {NP}.
-A radio message referred to {NP}.
-The broadcast featured a segment about {NP}.
-A podcast episode touched on {NP}.
-The lecture included an example involving {NP}.
-During the lesson, attention shifted to {NP}.
-The announcement made reference to {NP}.
-A voicemail message mentioned {NP}.
-The email drew attention to {NP}.
-The text message mentioned {NP}.
-The article included a paragraph about {NP}.
-A headline referred to {NP}.
-A footnote drew attention to {NP}.
-The transcript mentioned {NP}.
-The meeting minutes contained a reference to {NP}.
-In a later recollection, there was a mention of {NP}.
-The later recollection centered on {NP}.
-Recalled afterward was a scene involving {NP}.
-A recollection shared later included a description of {NP}.
-The summary included a brief mention of {NP}.
-In summary, {NP} was noted.
-One detail in the summary concerned {NP}.
-A reference to {NP} appeared near the start of the summary.
-Along the route, {NP} was noticed.
-The walk led past {NP}.
-During the visit, attention turned to {NP}.
-At the edge of the scene, {NP} became noticeable.
-During the tour, {NP} was pointed out.
-An entry in the log documented {NP}.
-The checklist included a reference to {NP}.
-The inventory contained a listing for {NP}.
-The catalog included a description of {NP}.
-At the end of the presentation, {NP} was mentioned.
-Much later, a recollection of {NP} resurfaced.
-Among the later recollections, one concerned {NP}.
-The recap opened with {NP}.
-Highlighted in the overview was {NP}.
-The main point of the summary was {NP}.
-Partway through the outing, {NP} was spotted.
-Later in the trip, attention fell on {NP}.
-On the tour, {NP} drew interest.
-One catalog entry was devoted to {NP}.
-Midway through the presentation, the focus was on {NP}.
-The presentation closed with a remark about {NP}.
-The agenda had an item about {NP}.
-The questionnaire asked about {NP}.
-A postscript referred to {NP}.'''
-
-test = '''
-A glimpse of {NP} appeared momentarily.
-Looking around revealed {NP}.
-The scene offered a view of {NP}.
-What caught the eye was {NP}.
-The surroundings revealed {NP}.
-Unexpectedly, {NP} turned up.
-The presence of {NP} was apparent.
-Note was taken of {NP}.
-The surroundings featured {NP}.
-There was no missing {NP}.
-A scene unfolded with {NP} in view.
-The surrounding area offered a glimpse of {NP}.
-The scene was notable for the presence of {NP}.
-The surroundings brought {NP} into focus.
-There was an opportunity to observe {NP}.
-Briefly, {NP} was in sight.
-For a moment, {NP} was there to be seen.
-Within sight was {NP}.
-There, unmistakably, was {NP}.
-The sight that presented itself was {NP}.
-Out of nowhere, {NP} appeared.
-For a while, {NP} remained visible.
-Part of the scenery was {NP}.
-It was easy to make out {NP}.
-In the midst of the scene was {NP}.
-Off to one side, {NP} could be seen.
-At a glance, {NP} was evident.
-The sight of {NP} was unexpected.
-Somewhere ahead, {NP} was visible.
-As the scene opened up, {NP} emerged.
-Into the scene came {NP}.
-Eventually, {NP} became discernible.'''
-
-
-[suffix]
-template = "\nRespond with {L1} if the described entity is {G1}, and respond with {L2} if the described entity is {G2}.\nAnswer:"
-
-vars = [
-    ["A", "B"],
-    ["0", "1"],
+contextual_train = [
 ]
-
-
-[settings]
-determiners = [
-    "the ",
-    "a ",
+contextual_test = [
 ]
