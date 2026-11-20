@@ -106,7 +106,6 @@ neutral_carriers_test = [
 anchors_train = [
     "animal",
     "creature",
-    "rabbit",
     "fox",
     "bear",
     "wolf",
@@ -348,7 +347,6 @@ concepts_train = [
     ["tiger", "uninstantiated"],
     ["animal", "uninstantiated"],
     ["creature", "uninstantiated"],
-    ["rabbit", "uninstantiated"],
     ["fox", "uninstantiated"],
     ["bear", "uninstantiated"],
     ["wolf", "uninstantiated"],
@@ -457,7 +455,6 @@ concepts_train = [
     ["feline", "uninstantiated"],
     ["animal", "uninstantiated"],
     ["creature", "uninstantiated"],
-    ["rabbit", "uninstantiated"],
     ["fox", "uninstantiated"],
     ["bear", "uninstantiated"],
     ["wolf", "uninstantiated"],
